@@ -16,11 +16,487 @@
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.2.0",
-        "cells": []
+        "cells": [
+          {
+            "position": {
+              "x": 849.9999999999982,
+              "y": 60.00000000000199
+            },
+            "size": {
+              "width": 630,
+              "height": 690
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Application"
+              }
+            },
+            "id": "6f1ac89b-03bb-4230-bf9a-e1c0a556e3a0",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Application",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 460,
+              "y": 180
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "User"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "c94941b7-411f-4ff9-9272-d33ac1c1a40c",
+            "zIndex": 0,
+            "data": {
+              "type": "tm.Actor",
+              "name": "User",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1030,
+              "y": 120
+            },
+            "size": {
+              "width": 210,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Аутентификация"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "2fd3ff5f-7c20-4e66-80e1-5d4c68b449e8",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Process",
+              "name": "Аутентификация",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "df31ee03-583b-42ba-a443-7eb132ae9896",
+                  "title": "Несанкционированный доступ",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Злоумышленник может получить доступ к аккаунту пользователя через подделку или перехват учетных данных (например, через фишинг).\nD:8/R:7/E:8/A:10/D:7",
+                  "mitigation": "- Использование многофакторной аутентификации (MFA): Внедрите двухфакторную аутентификацию для повышения уровня безопасности.\n- Использование современных протоколов безопасности",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1030,
+              "y": 392
+            },
+            "size": {
+              "width": 210,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Процесс звонка"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "c6fc2814-8ece-491b-aac5-30dc2a9309f8",
+            "data": {
+              "type": "tm.Process",
+              "name": "Процесс звонка",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "df31ee03-583b-42ba-a443-7eb132ae9896",
+                  "title": "Сниффинг данных",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Злоумышленник может перехватить аудио- и видеопоток во время конференц-связи.\nD:8/R:6/E:6/A:9/D:5",
+                  "mitigation": "- Шифрование аудио и видео потоков\n- Использование современных протоколов безопасности",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "6,8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 3,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            },
+            "zIndex": 3
+          },
+          {
+            "position": {
+              "x": 1030,
+              "y": 532
+            },
+            "size": {
+              "width": 210,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Процесс обмена \nфайлами"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "376f74e0-e6c6-4b16-91b9-75ba685fe4ba",
+            "data": {
+              "type": "tm.Process",
+              "name": "Процесс обмена \nфайлами",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "d1bc39a7-d54b-438f-b95d-aee0a315ef60",
+                  "title": "Разглашение файлов",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Злоумышленник может получить доступ к файлам, переданным в рамках конференции.\nD:10/R:7/E:7/A:10/D:8",
+                  "mitigation": "- Шифрование файлов\n- Управление доступом и разрешениями\n- Регулярные аудиты безопасности",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "8,4"
+                },
+                {
+                  "id": "614f56ff-9332-43d5-9fbf-6403a0767f85",
+                  "title": "Атака с использованием поддельных файлов",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Злоумышленник может загрузить поддельные файлы, которые могут содержать вредоносный код.\nD:10/R:10/E:10/A:10/D:10",
+                  "mitigation": "- Проверка целостности файлов\n- Антивирусное сканирование файлов\n- Установка ограничений на типы загружаемых файлов",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "10"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            },
+            "zIndex": 4
+          },
+          {
+            "position": {
+              "x": 1030,
+              "y": 262
+            },
+            "size": {
+              "width": 210,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Настройка\nпрофиля"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "92296b1b-770f-425f-9f91-519988b67256",
+            "data": {
+              "type": "tm.Process",
+              "name": "Настройка\nпрофиля",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "df31ee03-583b-42ba-a443-7eb132ae9896",
+                  "title": "Уязвимости в конфигурации",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Неправильные настройки профиля могут привести к утечке информации или доступу к дополнительным функциям.\nD:10/R:10/E:7/A:7/D:8",
+                  "mitigation": "- Валидация и проверка настроек\n- Шифрование конфиденциальной информации",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "8,4"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            },
+            "zIndex": 5
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "3dbdd58f-729a-49e3-b70b-bbfda6323afc",
+            "source": {
+              "x": 580,
+              "y": 210
+            },
+            "target": {
+              "cell": "2fd3ff5f-7c20-4e66-80e1-5d4c68b449e8"
+            },
+            "vertices": [
+              {
+                "x": 730,
+                "y": 210
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "b3bf9988-9af6-4953-99df-9df8288ce1b5",
+            "source": {
+              "x": 573,
+              "y": 214
+            },
+            "target": {
+              "cell": "92296b1b-770f-425f-9f91-519988b67256"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "073e6bd5-48f6-41ab-a2de-cb4fc9128ed9",
+            "source": {
+              "x": 580,
+              "y": 220
+            },
+            "target": {
+              "cell": "c6fc2814-8ece-491b-aac5-30dc2a9309f8"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "f235a6a9-3d54-43bd-b8cb-61b1f53b4147",
+            "source": {
+              "x": 573,
+              "y": 224
+            },
+            "target": {
+              "cell": "376f74e0-e6c6-4b16-91b9-75ba685fe4ba"
+            }
+          }
+        ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "Cyber-ED",
-    "threatTop": 0
+    "threatTop": 5
   }
 }
